@@ -55,7 +55,7 @@ func main() {
 ```
 
 ## 已知問題
-- 若 method 使用 Pointer Receiver method（意即 `func (p *position) GetX() float64 {`） 時，須使用 Pointer Type variable（意即 `return &position{0.0, 0.0, 0.0}`）回傳給介面，否則將會出現下方錯誤訊息
+- 若 func 使用 Pointer Receiver method（意即 `func (p *position) GetX() float64 {`） 時，須使用 Pointer Type variable（意即 `return &position{0.0, 0.0, 0.0}`）回傳給介面，否則將會出現下方錯誤訊息
 - 詳情可參考[這篇](https://mileslin.github.io/2020/08/Golang/為什麼-Pointer-Receiver-不能使用-Value-Type-賦值給-Interface-Value/)文章
 
 ```sh
@@ -66,7 +66,6 @@ func main() {
         position does not implement Position (GetX method has pointer receiver)
 ```
 
-
-## Regerences
+## References
 - [2020/09/14 - 在 Go 語言中，我為什麼使用介面](https://mp.weixin.qq.com/s/AMgCzCG_096iaCdtOJIBBA)
 - [2020/08/01 - [Go] 為什麼 Pointer Receiver 不能使用 Value Type 賦值給 Interface Value](https://mileslin.github.io/2020/08/Golang/為什麼-Pointer-Receiver-不能使用-Value-Type-賦值給-Interface-Value/)
