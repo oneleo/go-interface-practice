@@ -19,7 +19,7 @@ func (mg *MyGame) Draw() {
 }
 
 type DumperGameWithDraw struct {
-	gameInterface GameInterface
+	DumperGame
 }
 
 func (dgwd *DumperGameWithDraw) Update() {
@@ -39,12 +39,16 @@ func (dg *DumperGame) Update() {
 }
 
 func runGame(gi GameInterface) {
-	//???
+	gi.Update()
+	if game, ok := gi.(interface{ Draw() error }); ok {
+		game.Draw()
+	}
 }
 
 func chkFunc(gi GameInterface) {
 	if _, ok := gi.(interface{ Draw() error }); ok {
-		runGame(&DumperGameWithDraw{gameInterface: gi})
+		runGame(&DumperGameWithDraw{
+			DumperGame{gameInterface: gi}})
 	}
 	runGame(&DumperGame{gameInterface: gi})
 }
