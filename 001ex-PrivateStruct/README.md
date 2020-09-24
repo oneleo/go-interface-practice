@@ -1,5 +1,5 @@
-# go-interface-practice
- golang 語言：一個典型使用 interface 的時機
+# Private Struct
+ 使用私有（private）struct 時，可使用公有（public）interface 來接收
 
 ## 需求 & 情境
 - 建立自定義 `position` struct
