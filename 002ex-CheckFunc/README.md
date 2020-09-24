@@ -27,7 +27,7 @@ func (mg *MyGameWithDraw) Draw() {
 ```
 
 ## 解法
-- 使用 interface 來接 struct 及確認是否有指定方法
+- 使用 interface 來接 struct 及確認是否有實現指定方法
 
 ```go
 type IGame interface {
@@ -36,6 +36,7 @@ type IGame interface {
 
 func RunGame(gi IGame) {
 	gi.Update()
+	// 確認是否有實現指定方法 Draw()
 	if game, ok := gi.(interface{ Draw() }); ok {
 		game.Draw()
 	}

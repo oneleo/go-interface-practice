@@ -41,6 +41,7 @@ func (mg *MyGameWithDraw) Draw() {
 // RunGame 會判斷要執行的 Game 是否有實現 Draw() 方法，有就會執行
 func RunGame(gi IGame) {
 	gi.Update()
+	// 確認是否有實現指定方法 Draw()
 	if game, ok := gi.(interface{ Draw() }); ok {
 		game.Draw()
 	}
