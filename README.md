@@ -5,5 +5,8 @@
 - [001ex-PrivateStruct](./001ex-PrivateStruct)
 
 ## References
+- [2020/10/22 - golang 補遺：指標和介面](https://mp.weixin.qq.com/s/J_eW_O8AP-on_0DAJ6P1sw)
+    - interface 有自己對應的實體數據結構
+    - 盡量不要用指標去指向 interface
 - [2020/09/14 - 在 Go 語言中，我為什麼使用介面](https://mp.weixin.qq.com/s/AMgCzCG_096iaCdtOJIBBA)
 - [2020/08/01 - [Go] 為什麼 Pointer Receiver 不能使用 Value Type 賦值給 Interface Value](https://mileslin.github.io/2020/08/Golang/為什麼-Pointer-Receiver-不能使用-Value-Type-賦值給-Interface-Value/)
